@@ -14,11 +14,9 @@
 
 - name: Install packages
   package:
-    name: "{{ item }}"
+    name: "grafana"
     state: present
-    with_items:
-    - "grafana"
-    register: install_packages
+  register: install_packages
 
 - name: Enable and (re)start service
   service:
@@ -26,7 +24,7 @@
     enabled: yes
     state: restarted
     use: systemd
-    when: install_packages.changed
+  when: install_packages.changed
 
 - name: Wait for grafana to start
   wait_for:
