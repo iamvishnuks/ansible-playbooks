@@ -1,0 +1,8 @@
+grafana_packages: [grafana] 
+  
+grafana_port: 3000
+
+grafana_repo: https://packagecloud.io/grafana/stable/el/$releasever/$basearch
+grafana_repo_key: https://grafanarel.s3.amazonaws.com/RPM-GPG-KEY-grafana
+
+grafana_root_dir: /usr/share/grafana
