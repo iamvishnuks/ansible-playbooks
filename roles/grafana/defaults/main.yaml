@@ -1,8 +1,16 @@
 grafana_packages: [grafana] 
-  
+grafana_yum_repo_template: etc/yum.repos.d/grafana.repo.j2
 grafana_port: 3000
 
 grafana_repo: https://packagecloud.io/grafana/stable/el/$releasever/$basearch
 grafana_repo_key: https://grafanarel.s3.amazonaws.com/RPM-GPG-KEY-grafana
 
 grafana_root_dir: /usr/share/grafana
+grafana_data_dir: "/var/lib/grafana"
+
+grafana_database:
+    type: sqlite3
+
+grafana_plugins:
+    - grafana-clock-panel
+    - grafana-piechart-panel

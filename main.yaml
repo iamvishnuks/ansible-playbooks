@@ -5,4 +5,5 @@
   become_method: sudo
   roles:
     - role: grafana
+    - role: nginx
   
