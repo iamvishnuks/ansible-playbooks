@@ -6,4 +6,7 @@
   roles:
     - role: grafana
     - role: nginx
-  
+    - role: firewalld
+  tasks:
+    - name: Enforce SELinux
+      command: setsebool httpd_can_network_connect on -P

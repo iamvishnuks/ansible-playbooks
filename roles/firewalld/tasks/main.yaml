@@ -1,0 +1,2 @@
+- { include: install.yaml, tags: ["install"] }
+- { include: configure.yaml }
